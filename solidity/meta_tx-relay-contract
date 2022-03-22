@@ -1,0 +1,18 @@
+
+きっかけ
+- ERC20 uses a "Context.sol" file, to express the context of that execution
+    - they dont use "msg.sender" directly
+
+- ERC-865
+
+- ガス節約
+- ユーザーがガスを払わずに、対話できる
+    - UX改善
+    - Relay contract なるものに、ガスを肩代わりさせる
+
+- txをDappのサーバーに送信
+    - 自分のprivで署名
+- Dappサーバーのprivkeyでさらに署名
+    - relay contractに送信
+- relayは、真のターゲットであるコントラクトに投げる
+
